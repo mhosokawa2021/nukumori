@@ -1,0 +1,226 @@
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
+    <title>ラジコンモード</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"
+    />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+      <style>
+        #obniz_button_0 {
+          background: url(images/up_arrow_ico.svg) no-repeat scroll 0 0;
+          width: 38px !important;
+          height: 38px !important;
+          font-size: 30px !important;
+          background-size: 38px;
+          outline: none;
+          border-color: unset;
+          border: 0;
+          /* up */
+          width: 30px;
+          position: absolute;
+          transform: translate(-50%, -50%);
+          top: 15%;
+          left: 50%;
+          padding: 0;
+        }
+      
+        #obniz_button_1 {
+          background: url("images/down_arrow_ico.svg") no-repeat scroll 0 0;
+          width: 38px !important;
+          height: 38px !important;
+          font-size: 30px !important;
+          background-size: 38px;
+          outline: none;
+          border-color: unset;
+          border: 0;
+          /* down */
+          width: 30px;
+          position: absolute;
+          transform: translate(-50%, -50%);
+          top: 85%;
+          left: 50%;
+          padding: 0;
+        }
+      
+        #obniz_button_2 {
+          background: url("images/left_arrow_ico.svg") no-repeat scroll 0 0;
+          width: 38px !important;
+          height: 38px !important;
+          font-size: 30px !important;
+          background-size: 38px;
+          outline: none;
+          border-color: unset;
+          border: 0;
+          /* right */
+          width: 30px;
+          position: absolute;
+          transform: translate(-50%, -50%);
+          top: 50%;
+          left: 15%;
+          padding: 0;
+        }
+      
+        #obniz_button_3 {
+          background: url("images/right_arrow_ico.svg") no-repeat scroll 0 0;
+          width: 38px !important;
+          height: 38px !important;
+          font-size: 30px !important;
+          background-size: 38px;
+          outline: none;
+          border-color: unset;
+          border: 0;
+          /* left */
+          width: 30px;
+          position: absolute;
+          transform: translate(-50%, -50%);
+          top: 50%;
+          left: 85%;
+          padding: 0;
+        }
+        .btn-primary:hover,
+        .btn-primary:active,
+        .btn-primary:focus {
+          background-color: unset !important;
+          border: none !important;
+          box-shadow: unset !important;
+        }
+      </style>
+  </head>
+  <body>
+      <div class="collapse" id="navbarToggleExternalContent">
+        <div class="bg-dark p-4 justify-content-end">
+          <p class="text-end"><a href="#">HOME</a></p>
+          <p class="text-end"><a href="#">親密度メーター</a></p>
+          <p class="text-end"><a href="#">コミュニケーション回数</a></p>
+          <p class="text-end"><a href="apps.html">数の暴力</a></p>
+        </div>
+      </div>
+      <nav class="navbar navbar-dark bg-success p-3">
+        <div class="container-fluid justify-content-end">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent"
+            aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </div>
+      </nav>
+
+    <main class="container-fluid">
+      <div id="OBNIZ_OUTPUT">
+        <img class="leaf" src="images/leaf_ico.svg" alt="">
+      </div>
+      <class class="oval">
+        <img class="forward" src="images/up_arrow_ico.svg" alt="">
+        <img class="right" src="images/right_arrow_ico.svg" alt="">
+        <img class="left" src="images/left_arrow_ico.svg" alt="">
+        <img class="back" src="images/down_arrow_ico.svg" alt="">
+      </p>
+    </main>
+
+    <footer class="container-fluid bg-success">
+      <p>footer</p>
+    </footer>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script
+      src="https://unpkg.com/obniz@latest/obniz.js"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://unpkg.com/obniz-parts-kits@0.16.0/iothome/index.js"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://unpkg.com/obniz-parts-kits@0.16.0/airobot/index.js"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://unpkg.com/obniz-parts-kits@0.16.0/ui/index.js"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://unpkg.com/obniz-parts-kits@0.16.0/ai/howler2.1.2/howler.js"
+      crossorigin="anonymous"
+    ></script>
+    
+    <script
+      src="https://unpkg.com/obniz-parts-kits@0.16.0/ai/opencv3.4/opencv.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@3.3.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/mobilenet@2.1.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/posenet@2.2.2"></script>
+    
+    <script
+      src="https://unpkg.com/obniz-parts-kits@0.16.0/ai/clmtrackr/clmtrackr.js"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://unpkg.com/obniz-parts-kits@0.16.0/ai/clmtrackr/emotion_classifier.js"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://unpkg.com/obniz-parts-kits@0.16.0/ai/clmtrackr/emotionmodel.js"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://unpkg.com/obniz-parts-kits@0.16.0/ai/clmtrackr/model_pca_20_svm.js"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://unpkg.com/obniz-parts-kits@0.16.0/ai/index.js"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://unpkg.com/obniz-parts-kits@0.16.0/storage/index.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="../gitignore/env.js"></script>
+    <script>
+      (async function(){
+              var obniz, forward_button, back_button, right_EF_BC_BFbutton, left_button, airobotkit;
+        
+                obniz = new Obniz(obniz_id);
+                await obniz.connectWait();
+                
+                airobotkit = obniz.wired("AIRobotKit",{}); 
+
+                forward_button = new ObnizUI.Button('');
+                back_button = new ObnizUI.Button('');
+                right_button = new ObnizUI.Button('');
+                left_button = new ObnizUI.Button('');
+        
+                while (true) {
+                  await ObnizUI.Util.wait(0);
+                  if (forward_button.isTouching()) {
+                    airobotkit.move('forward');
+                  } else if (back_button.isTouching()) {
+                    airobotkit.move('back');
+                  } else if (right_button.isTouching()) {
+                    airobotkit.turn('right');
+                  } else if (left_button.isTouching()) {
+                    airobotkit.turn('left');
+                  } else {
+                    airobotkit.stop();
+                  }
+                }
+      })();
+    </script>
+  </body>
+</html>

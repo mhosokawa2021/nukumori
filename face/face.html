@@ -1,0 +1,78 @@
+<html lang="ja">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="containr-fluid">
+    <!-- <h3 id="bploading" style="text-align:center;">ロード中...</h3> -->
+    <header class="container-fluid">
+        <a href="#">
+            <P>NUKUMORI</P>
+        </a>
+        <img class="menu" src="images/menu_icon.svg" alt="メニューを開くためのアイコン">
+    </header>
+    <div class="cam" id="OBNIZ_OUTPUT">
+        <img class="tv" src="images/tv-icon.svg" alt="カメラの映像が表示されるテレビのアイコン">
+    </div>
+    <footer class="container-fluid">
+        <small>&copy;NUKUMORI</small>
+    </footer>
+
+    <script src="https://unpkg.com/obniz@latest/obniz.js" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/obniz-parts-kits@0.16.0/iothome/index.js" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/obniz-parts-kits@0.16.0/airobot/index.js" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/obniz-parts-kits@0.16.0/ui/index.js" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/obniz-parts-kits@0.16.0/ai/howler2.1.2/howler.js" crossorigin="anonymous"></script>
+
+    <script src="https://unpkg.com/obniz-parts-kits@0.16.0/ai/opencv3.4/opencv.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@3.3.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/mobilenet@2.1.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/posenet@2.2.2"></script>
+
+    <script src="https://unpkg.com/obniz-parts-kits@0.16.0/ai/clmtrackr/clmtrackr.js" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/obniz-parts-kits@0.16.0/ai/clmtrackr/emotion_classifier.js"
+        crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/obniz-parts-kits@0.16.0/ai/clmtrackr/emotionmodel.js"
+        crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/obniz-parts-kits@0.16.0/ai/clmtrackr/model_pca_20_svm.js"
+        crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/obniz-parts-kits@0.16.0/ai/index.js" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/obniz-parts-kits@0.16.0/storage/index.js" crossorigin="anonymous"></script>
+
+
+    <script>
+        // $("#bploading").text("実行中");
+        (async function () {
+            var obniz, airobotkit;
+
+
+            obniz = new Obniz('****-****');
+            await obniz.connectWait();
+            airobotkit = obniz.wired("AIRobotKit", {});
+            await _ai.startCamWait();
+            
+            while (_ai.isFaceInside()) {
+                await ObnizUI.Util.wait(0);
+                // airobotkit.move('back');
+            }
+            airobotkit.stop();
+            $('#video_forairobotkit').css('height', '132px')
+            $('#video_forairobotkit').css('width', '200px')
+        })();
+
+    </script>
+</body>
+
+</html>
