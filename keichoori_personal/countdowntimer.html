@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="utf-8">
+	<title>Dateオブジェクトのメソッドを使う</title>
+</head>
+
+<body>
+	<h1 class="timer"></h1>
+	<script>
+		let now;
+		let today;
+		let res;
+		let days;
+		let diff;
+
+		function gs (){
+
+			var twoDigit = function (num) {
+				var digit
+				if (num < 10) { digit = "0" + num; }
+				else { digit = num; }
+				return digit;
+			}
+
+			now = new Date();
+			today = '';
+			today += now.getFullYear() + '年';
+			today += (now.getMonth() + 1) + '月';
+			today += now.getDate() + '日';
+			today += now.getHours() + '時';
+			today += now.getMinutes() + '分';
+			today += now.getHours() + '秒';
+
+
+
+			res = new Date(2022, 4, 9, 10, 29, 59);
+
+			let diff = res - now;
+			let diffSec = Math.floor(diff / 1000);
+
+			let dateSec = 60 * 60 * 24;
+			let hourSec = 60 * 60;
+			let minSec = 60;
+
+			let Days = Math.floor(diffSec / dateSec);
+			let Hours = twoDigit(Math.floor(diffSec / hourSec % 24));
+			let Minutes = twoDigit(Math.floor(diffSec / minSec % 60));
+			let Seconds = twoDigit(Math.floor(diffSec % 60));
+
+			days = '';
+
+			days += `${Days}日${Hours}時間${Minutes}分${Seconds}秒`;
+			document.querySelector('.timer').innerHTML = `卒業制作提出まであと${days}`;
+			setTimeout(gs, 1000);	
+		}
+
+		gs();
+		
+
+		
+
+
+		
+
+
+
+
+
+
+	</script>
+</body>
+</html>
