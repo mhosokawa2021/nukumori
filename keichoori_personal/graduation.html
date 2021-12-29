@@ -2,7 +2,7 @@
 <html lang="ja">
 <head>
 	<meta charset="utf-8">
-	<title>卒制タイマー</title>
+	<title>さよならタイマー</title>
 </head>
 <style>
 	body {
@@ -49,7 +49,7 @@
 
 
 
-			res = new Date(2022, 4, 9, 10, 29, 59);
+			res = new Date(2022, 4, 23, 10, 29, 59);
 
 			let diff = res - now;
 			let diffSec = Math.floor(diff / 1000);
@@ -66,7 +66,7 @@
 			days = '';
 
 			days += `${Days}日${Hours}時間${Minutes}分${Seconds}秒`;
-			document.querySelector('.timer').innerHTML = `卒業制作提出まであと${days}`;
+			document.querySelector('.timer').innerHTML = `Gs卒業まであと${days}`;
 			setTimeout(gs, 1000);	
 		}
 
