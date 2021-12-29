@@ -44,7 +44,7 @@ body {
 /* header
 --------------------------------------------------------- */
 .lp-sec-header {
-  background-color: #fff;
+  background-color: rgb(187, 123, 63);
 }
 
 .lp-sec-header > .lp-block .lp-logo img {
@@ -86,7 +86,7 @@ body {
 --------------------------------------------------------- */
 .lp-sec-big {
   background-color: #fff;
-  background-image: url(../../img/image.png);
+  background-image: url(../../img/pien.png);
 }
 
 .lp-sec-big--center > .lp-block > .lp-title {
@@ -255,6 +255,11 @@ body {
 
 .lp-sec-list > .lp-block > .lp-list > .lp-item::before {
   color: #333;
+}
+
+.personal {
+  font-size: large;
+  font-weight: 600;
 }
 
 /* footer
