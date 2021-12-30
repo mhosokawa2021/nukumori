@@ -47,11 +47,11 @@ header .menu:hover {
 
 #video_forairobotkit {
     background-color: rgb(136, 136, 136);
-    height: 235px;
-    width: 227px;
-    top: 37%;
-    left: 10%;
+    top: 38%;
+    left: 8%;
     position: absolute;
+    height: 36%;
+    width: 70%;
 }
 
 footer {
@@ -60,5 +60,24 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+@media screen and (min-width:426px) {
+    .tv {
+    width: 38%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    z-index: 1;
+}
+    #video_forairobotkit {
+    width: 27% !important;
+    height: 56% !important;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 61%;
+    left: 47%;
+}
 }
 
