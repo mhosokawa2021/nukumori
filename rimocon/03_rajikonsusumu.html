@@ -196,7 +196,7 @@
       (async function(){
               var obniz, forward_button, back_button, right_EF_BC_BFbutton, left_button, airobotkit;
         
-                obniz = new Obniz(obniz_id);
+                obniz = new Obniz();
                 await obniz.connectWait();
                 
                 airobotkit = obniz.wired("AIRobotKit",{}); 
