@@ -53,6 +53,7 @@ main .result_container {
 main .mater {
     width: 300px;
     height: 300px;
+    border-radius: 30px;
     margin: 0 auto;
     text-align: center;
     background-image: url(../images/result_area.png);
@@ -70,13 +71,13 @@ main .mater .year {
 main .mater .date {
     position: absolute;
     transform: translate(-50%, -50%);
-    top: 21%;
-    left: 72%;
+    top: 14%;
+    left: 37%;
 }
 main .mater .result {
     position: absolute;
     transform: translate(-50%, -50%);
-    top: 73%;
+    top: 33%;
     left: 50%;
 }
 
@@ -106,6 +107,13 @@ footer {
 main .user {
     width: 64px;
     margin-top: -1%;
+}
+
+main .mater .result {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 49%;
+    left: 50%;
 }
 }
 
