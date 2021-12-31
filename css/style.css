@@ -25,7 +25,7 @@ header .menu:hover {
 
 main {
     height: 680px;
-    background-color: rgb(179, 179, 179);;
+    background-color: rgb(136, 207, 134);;
 }
 
 main .user {
@@ -55,8 +55,8 @@ main .mater {
     height: 300px;
     margin: 0 auto;
     text-align: center;
-    background-image: url(../images/index.svg);
-    background-size: cover;
+    background-image: url(../images/result_area.png);
+    background-size: contain;
     background-repeat: no-repeat;
     position: relative;
 }
@@ -70,7 +70,7 @@ main .mater .year {
 main .mater .date {
     position: absolute;
     transform: translate(-50%, -50%);
-    top: 14%;
+    top: 21%;
     left: 72%;
 }
 main .mater .result {
@@ -94,17 +94,19 @@ footer {
     }
 
     main .mater {
-    width: 500px;
+    width: 742px;
     height: 500px;
+    border-radius: 30px;
     margin: 0 auto;
     text-align: center;
-    background-image: url(../images/index.svg);
-    background-size: cover;
+    background-image: url(../images/result_area.png);
+    background-size: contain;
     background-repeat: no-repeat;
 }
-
 main .user {
     width: 64px;
     margin-top: -1%;
 }
 }
+
+
