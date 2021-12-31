@@ -28,6 +28,10 @@ main {
     background-color: rgb(136, 207, 134);;
 }
 
+@media screen and(max-width:425px) {
+    
+}
+
 main .user {
     width: 64px;
     margin-top: -35%;
@@ -62,12 +66,6 @@ main .mater {
     position: relative;
 }
 
-main .mater .year {
-    position: absolute;
-    transform: translate(-50%, -50%);
-    top: 14%;
-    left: 30%;
-}
 main .mater .date {
     position: absolute;
     transform: translate(-50%, -50%);
@@ -88,6 +86,11 @@ footer {
 
 @media screen and (min-width:426px) {
 
+    main .user {
+        width: 64px;
+        margin-top: -1%;
+    }
+    
     main .result_container {
         font-weight: bold;
         font-size: 25px;
@@ -103,18 +106,21 @@ footer {
     background-image: url(../images/result_area.png);
     background-size: contain;
     background-repeat: no-repeat;
-}
-main .user {
-    width: 64px;
-    margin-top: -1%;
-}
+    }
 
-main .mater .result {
+    main .mater .date {
     position: absolute;
     transform: translate(-50%, -50%);
-    top: 49%;
-    left: 50%;
+    top: 23%;
+    left: 70%;
 }
+
+    main .mater .result {
+        position: absolute;
+        transform: translate(-50%, -50%);
+        top: 49%;
+        left: 50%;
+    }
 }
 
 
