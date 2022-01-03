@@ -41,8 +41,8 @@
             <div class="result_container">
                 <h1 class="result_title">おもいで</h1>
                 <div class="mater">
-                    <p class="year">0000年</p>
-                    <p class="date">00月00日</p>
+                    <p class="year"></p>
+                    <p class="date"></p>
                     <div class="result">
                         <p class="left">会話の回数は</p>
                         <p class="right"><span id="talk"></span>回だよ！</p>
@@ -72,6 +72,15 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"
         integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script>
+        const date = new Date;
+        
+        const year = date.getFullYear() + '年';
+        const today = (date.getMonth() + 1) + '月' + date.getDate() + '日';
+
+        $('.year').text(year);
+        $('.date').text(today);
+        
+
         const API_URL = " https://api.sssapi.app/5V5uFiAUh9uGkcBWE34O7"; $(()=> {
                 $.ajax({
                     type: "GET",
@@ -83,10 +92,10 @@
                         console.log(response)
                         const talk = response.talkcount
                         // const game = response.name
-                        // const score = response.age
+                        const score = response.friend
                         $('#talk').text(talk)
                         // $('#game').text(game)
-                        // $('#score').text(score)
+                        $('#score').text(score)
                     })
                     .fail(() => {
                         window.alert('エラー');
