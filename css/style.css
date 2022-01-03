@@ -80,9 +80,24 @@ main .mater .result {
     left: 50%;
 }
 
+main .left {
+    text-align: left;
+}
+main .right {
+    text-align: right;
+}
+
 
 footer {
     height: 80px;
+}
+
+@media screen and (max-width:425px) {
+    .result {
+        width: 135px;
+        font-size: 13px;
+        line-height: 0.5;
+    }
 }
 
 @media screen and (min-width:426px) {
@@ -101,6 +116,12 @@ footer {
     background-image: url(../images/index.svg);
     background-size: cover;
     background-repeat: no-repeat;
+}
+
+.result {
+    width: 225px;
+    font-size: 22px;
+    line-height: 1;
 }
 
 main .user {
