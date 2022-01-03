@@ -1,3 +1,5 @@
+
+
 header {
     height: 80px;
 }
@@ -22,32 +24,108 @@ header .menu:hover {
 }
 
 main {
-    height: 652px;
-    background-color: rgb(179, 179, 179);;
+    height: 680px;
+    background-color: rgb(144, 206, 154);
 }
 
 main .user {
     width: 64px;
-    margin-top: -70px;
+    margin-top: -35%;
 }
 
-main .mater_title {
-    margin: 0 auto;
+main .result_title {
     text-align: center;
+    font-size: 45px;
+    font-weight: bold;
+    font-family: cursive;
+    margin-top: -80px;
+    margin-bottom: 30px;
 }
+
+main .result_container {
+        font-weight: bold;
+        font-size: 16px;
+        font-family: cursive;
+}
+
+
 
 main .mater {
+    width: 300px;
+    height: 300px;
     margin: 0 auto;
     text-align: center;
+    background-image: url(../images/index.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
 }
 
-main .mater .chart {
-    width: 200px;
-    height: 200px;
-    margin: 0 auto;
-    background-color: white;
+main .mater .year {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 14%;
+    left: 30%;
 }
+main .mater .date {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 14%;
+    left: 72%;
+}
+main .mater .result {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 73%;
+    left: 50%;
+}
+
+main .left {
+    text-align: left;
+}
+main .right {
+    text-align: right;
+}
+
 
 footer {
     height: 80px;
+}
+
+@media screen and (max-width:425px) {
+    .result {
+        width: 135px;
+        font-size: 13px;
+        line-height: 0.5;
+    }
+}
+
+@media screen and (min-width:426px) {
+
+    main .result_container {
+        font-weight: bold;
+        font-size: 25px;
+        font-family: cursive;
+    }
+
+    main .mater {
+    width: 500px;
+    height: 500px;
+    margin: 0 auto;
+    text-align: center;
+    background-image: url(../images/index.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.result {
+    width: 225px;
+    font-size: 22px;
+    line-height: 1;
+}
+
+main .user {
+    width: 64px;
+    margin-top: -1%;
+}
 }

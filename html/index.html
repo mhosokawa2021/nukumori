@@ -15,33 +15,41 @@
 
 <body>
     <div class="container-fluid">
-        <div class="collapse" id="navbarToggleExternalContent">
-            <div class="bg-dark p-4 justify-content-end">
-                <p class="text-end"><a href="#">HOME</a></p>
-                <p class="text-end"><a href="#">親密度メーター</a></p>
-                <p class="text-end"><a href="#">コミュニケーション回数</a></p>
-                <p class="text-end"><a href="apps.html">数の暴力</a></p>
+            <div class="row">
+                <!-- <div class="collapse" id="navbarToggleExternalContent"> -->
+                <div id="navbarToggleExternalContent" class="collapse bg-dark p-4 justify-content-end container-fluid w-100">
+                    <p class="text-end"><a href="#">HOME</a></p>
+                    <p class="text-end"><a href="#">親密度メーター</a></p>
+                    <p class="text-end"><a href="#">コミュニケーション回数</a></p>
+                    <p class="text-end"><a href="apps.html">数の暴力</a></p>
+                </div>
+                <!-- </div> -->
             </div>
-        </div>
-        <nav class="navbar navbar-dark bg-success">
-            <div class="container-fluid justify-content-end">
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent"
-                    aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
+            <div class="row">
+                <nav class="navbar navbar-dark bg-success">
+                    <div class="container-fluid justify-content-end">
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent"
+                            aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                    </div>
+                </nav>
             </div>
-        </nav>
         <main class="row">
             <img class="user" src="../images/user.svg" alt="ユーザーのアイコン">
-            <div class="redsult_container">
-                <div class="mater_title">
-                    <h1>コンテンツのタイトル</h1>
-                </div>
+            <div class="result_container">
+                <h1 class="result_title">おもいで</h1>
                 <div class="mater">
-                    <img src="../images/eco.svg" alt="コンテンツのアイコン" width="125px">
-                    <div class="chart">
-                        ここにグラフを表示
+                    <p class="year"></p>
+                    <p class="date"></p>
+                    <div class="result">
+                        <p class="left">会話の回数は</p>
+                        <p class="right"><span id="talk"></span>回だよ！</p>
+                        <p class="left">ゲームの最高点は</p>
+                        <p class="right"><span id="game"></span>だよ！</p>
+                        <p class="left">仲良し度は</p>
+                        <p class="right"><span id="score"></span>だよ！</p>
                     </div>
                 </div>
             </div>
@@ -61,6 +69,39 @@
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
     -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script>
+        const date = new Date;
+        
+        const year = date.getFullYear() + '年';
+        const today = (date.getMonth() + 1) + '月' + date.getDate() + '日';
+
+        $('.year').text(year);
+        $('.date').text(today);
+        
+
+        const API_URL = " https://api.sssapi.app/5V5uFiAUh9uGkcBWE34O7"; $(()=> {
+                $.ajax({
+                    type: "GET",
+                    url: API_URL,
+                    dataType: "json",
+                })
+                    .done((response) => {
+                        console.log('Json')
+                        console.log(response)
+                        const talk = response.talkcount
+                        // const game = response.name
+                        const score = response.friend
+                        $('#talk').text(talk)
+                        // $('#game').text(game)
+                        $('#score').text(score)
+                    })
+                    .fail(() => {
+                        window.alert('エラー');
+                    });
+            });
+    </script>
 </body>
 
 </html>

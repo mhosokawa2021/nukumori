@@ -1,6 +1,4 @@
-body {
-    width: 375px;
-}
+
 
 header {
     height: 10%;
@@ -29,36 +27,57 @@ header .menu:hover {
 }
 
 .cam {
-    width: 375px;
     height: 80%;
     /* margin-top: 81.2px; */
     background-image: url(images/room.png);
-    background-size: contain;
+    background-size: cover;
     background-repeat: no-repeat;
+    background-position: center;
     position: relative;
 }
 
 .tv {
-    width: 256px;
+    width: 100%;
     position: absolute;
     transform: translate(-50%, -50%);
-    top: 25%;
+    top: 50%;
     left: 50%;
     z-index: 10;
 }
 
 #video_forairobotkit {
+    background-color: rgb(136, 136, 136);
+    top: 38%;
+    left: 8%;
     position: absolute;
-    top: 121px;
-    left: 68px;
+    height: 36%;
+    width: 70%;
 }
 
 footer {
     height: 10%;
-    margin-top: -280px;
     background-color: #3AA763;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+@media screen and (min-width:426px) {
+    .tv {
+    width: 38%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    z-index: 1;
+}
+    #video_forairobotkit {
+    width: 27% !important;
+    height: 56% !important;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 61%;
+    left: 47%;
+}
 }
 

@@ -2,6 +2,7 @@ body {
     background-image: url(images/background_img.jpg);
     background-size: cover;
     background-repeat: no-repeat;
+    background-position: bottom;
 }
 
 header {
@@ -30,7 +31,7 @@ header .menu:hover {
     cursor: pointer;
 }
 main {
-    height: 80%;
+    height: 700px;
     display: flex;
     align-items: center;
 }
