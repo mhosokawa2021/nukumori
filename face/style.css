@@ -45,14 +45,14 @@ header .menu:hover {
     z-index: 10;
 }
 
-#video_forairobotkit {
+/* #video_forairobotkit {
     background-color: rgb(136, 136, 136);
     top: 38%;
     left: 8%;
     position: absolute;
     height: 36%;
     width: 70%;
-}
+} */
 
 footer {
     height: 10%;
@@ -71,13 +71,13 @@ footer {
     left: 50%;
     z-index: 1;
 }
-    #video_forairobotkit {
+    /* #video_forairobotkit {
     width: 27% !important;
     height: 56% !important;
     position: absolute;
     transform: translate(-50%, -50%);
     top: 61%;
     left: 47%;
-}
+} */
 }
 
