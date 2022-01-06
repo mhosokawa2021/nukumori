@@ -73,6 +73,8 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"
         integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script>
+        const gameTextBox = document.getElementById("game");
+
         const date = new Date;
         
         const year = date.getFullYear() + '年';
@@ -102,6 +104,9 @@
                         window.alert('エラー');
                     });
             });
+            
+            let g_score = localStorage.getItem('score');
+            gameTextBox.innerHTML = g_score;
     </script>
 </body>
 
