@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<script src="js/jquery-2.1.3.min.js"></script>
+<link rel="stylesheet" href="css/sample.css">
+<title>今日のNUKUMORIイベント</title>
+</head>
+<body>
+
+<header>
+    <h1>NUKUMORI KUJI</h1>
+</header>
+
+<main>
+    <ul>
+        <li id="heart">♡☆♡　⇐ここを押してね</li>
+    </ul>
+    <p id="echo"></p>
+</main>
+
+<footer>フッター</footer>
+<script>
+$("#heart").on("click",function(){
+    const r = Math.ceil(Math.random()*5);
+
+    let view = "";
+    if(r == 1){
+        view = "心穏やかな一日";
+    }
+    if(r == 2){
+        view = "優しくされる日";
+    }
+    if(r == 3){
+        view = "ついている日";
+    }
+    if(r == 4){
+        view = "誰かを慰める日";
+    }
+    if(r == 5){
+        view = "ハグされる日";
+    }
+    $("#echo").html(view);
+});
+
+
+
+
+
+</script>
+</body>
+</html>
